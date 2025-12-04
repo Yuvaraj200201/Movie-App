@@ -9,10 +9,11 @@ export const MoviesProvider = ({ children }) => {
   const [genreList, setGenreList] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState(null);
 
-  const API_KEY = "ca8605050cf8e4346a6a80aa2c0d6208";
+  const apikey = import.meta.env.VITE_TMDB_API_KEY;
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
   useEffect(() => {
     const fetchGenreList = async () => {
-      const url = `http://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`;
+      const url = `${baseUrl}/genre/movie/list?api_key=${apikey}`;
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -25,11 +26,11 @@ export const MoviesProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    let url = `http://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${page}`;
+    let url = `${baseUrl}/movie/popular?api_key=${apikey}&page=${page}`;
     if (search) {
-      url = `http://api.themoviedb.org/3/search/movie?query=${search}&api_key=${API_KEY}&page=${page}`;
+      url = `${baseUrl}/search/movie?query=${search}&api_key=${apikey}&page=${page}`;
     } else if (selectedGenre) {
-      url = `http://api.themoviedb.org/3/discover/movie?with_genres=${selectedGenre}&api_key=${API_KEY}&page=${page}`;
+      url = `${baseUrl}/discover/movie?with_genres=${selectedGenre}&api_key=${apikey}&page=${page}`;
     }
     fetch(url)
       .then((res) => res.json())
@@ -50,7 +51,7 @@ export const MoviesProvider = ({ children }) => {
         setSearch,
         genreList,
         selectedGenre,
-        setSelectedGenre
+        setSelectedGenre,
       }}
     >
       {children}

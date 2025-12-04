@@ -6,9 +6,10 @@ const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
-  const API_KEY = "ca8605050cf8e4346a6a80aa2c0d6208";
+  const apikey = import.meta.env.VITE_TMDB_API_KEY;
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
   useEffect(() => {
-    fetch(`http://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+    fetch(`${baseUrl}/movie/${id}?api_key=${apikey}`)
       .then((res) => res.json())
       .then((data) => setMovie(data))
       .catch((err) => console.log(err));
