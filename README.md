@@ -51,4 +51,4 @@ Users can explore trending movies, search by title, filter by genre, view movie 
 ├── 📄 tailwind.config.js  
 └── 📄 vite.config.js  
 
-**Live Demo:** [Click Here to View App](https://movie-lghgyiw4h-yuvarajs-projects-1791453d.vercel.app)  
+**Live Demo:** [Click Here to View App](https://movie-app-git-main-yuvarajs-projects-1791453d.vercel.app)  
