@@ -51,4 +51,4 @@ Users can explore trending movies, search by title, filter by genre, view movie 
 ├── 📄 tailwind.config.js  
 └── 📄 vite.config.js  
 
-**Live Demo:** [Click Here](movie-app-snowy-psi.vercel.app) 
+**Live Demo:** [Click Here](https://movie-app-snowy-psi.vercel.app/) 
