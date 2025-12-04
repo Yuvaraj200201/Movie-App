@@ -14,10 +14,10 @@ Users can explore trending movies, search by title, filter by genre, view movie 
 
 ## 🛠️ Tech Stack  
 
-**Frontend Framework** - React + Vite
-**API** - TMDB API
-**Styling**	- Tailwind CSS
-**Routing** -	React Router DOM
+**Frontend Framework** - React + Vite  
+**API** - TMDB API  
+**Styling**	- Tailwind CSS  
+**Routing** -	React Router DOM  
 
 ## 📁 Folder Structure    
   
@@ -51,4 +51,4 @@ Users can explore trending movies, search by title, filter by genre, view movie 
 ├── 📄 tailwind.config.js  
 └── 📄 vite.config.js  
 
-**Live Demo:** [Click Here to View App](movie-app-snowy-psi.vercel.app)  
+**Live Demo:** [Click Here](movie-app-snowy-psi.vercel.app) 
